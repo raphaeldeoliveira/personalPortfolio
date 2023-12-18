@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import Button from "./components/atoms/Button";
+
+import Header from "./components/organisms/Header";
+
+import './styles/main.scss'
 
 function App() {
+
+  const [mobile, setMobile] = useState(false)
+  const [english, setEnglish] = useState(false)
+
+  useEffect(() => {
+    setMobile(window.innerWidth <= 780 ? true : false)
+  }, [])
+
+  function toggleLanguage() {
+    setEnglish((prevState) => !prevState)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header 
+        mobile={mobile}
+        english={english}
+        toggleLanguage={toggleLanguage}
+      />
     </div>
   );
 }

@@ -1,0 +1,50 @@
+@use '../../base/palete';
+
+.toggleLanguage {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.toggleLanguage__leftLabel, .toggleLanguage__rightLabel {
+    color: darken(palete.$tertiary-color, 50%);
+    font-weight: bold;
+    font-size: 1rem;
+    user-select: none;
+}
+
+.toggleLanguage__leftLabel--enable, .toggleLanguage__rightLabel--enable {
+    color: palete.$tertiary-color;
+}
+
+@media (max-width: 760px) {
+    .toggleLanguage__leftLabel, .toggleLanguage__rightLabel {
+        font-size: 0.9rem;
+    }
+
+    .toggleLanguage__leftLabel {
+        padding-top: 4px;
+        padding-right: 8px;
+    }
+
+    .toggleLanguage__rightLabel {
+        padding-top: 4px;
+        padding-left: 8px;
+    }
+}
+
+@media (max-width: 360px) {
+    .toggleLanguage__leftLabel, .toggleLanguage__rightLabel {
+        font-size: 0.8rem;
+    }
+
+    .toggleLanguage__leftLabel {
+        padding-top: 4px;
+        padding-right: 6.4px;
+    }
+
+    .toggleLanguage__rightLabel {
+        padding-top: 4px;
+        padding-left: 6.4px;
+    }
+}

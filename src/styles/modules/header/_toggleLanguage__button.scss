@@ -1,0 +1,102 @@
+@use '../../base/palete';
+
+.toggleLanguage__bg {
+    width: 2.875rem;
+    height: 1.5rem;
+    border-radius: 14px;
+    cursor: pointer;
+    margin: 0 8px;
+}
+
+.toggleLanguage__bg--disable {
+    background-color: darken(palete.$tertiary-color, 50%);
+    transition: background-color 300ms ease;
+}
+
+.toggleLanguage__bg--enable {
+    background-color: palete.$primary-color;
+    transition: background-color 500ms ease;
+}
+
+.toggleLanguage__dot {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: palete.$tertiary-color;
+    border-radius: 50%;
+}
+
+.toggleLanguage__dot--left {
+    float: left;
+    animation: dot-rightToLeft 200ms ease;
+}
+
+.toggleLanguage__dot--right {
+    float: right;
+    animation: dot-leftToRight 200ms ease;
+}
+
+@keyframes dot-leftToRight {
+    0% {
+        margin-right: 20px;
+    }
+    100% {
+        margin-right: 0px;
+    }
+}
+
+@keyframes dot-rightToLeft {
+    0% {
+        margin-left: 20px;
+    }
+    100% {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 760px) {
+
+    .toggleLanguage__bg {
+        width: 2.5875rem;
+        height: 1.35rem;
+        border-radius: 12.6px;
+    } 
+
+    .toggleLanguage__dot {
+        width: 1.35rem;
+        height: 1.35rem;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .toggleLanguage__bg {
+        width: 2.3rem;
+        height: 1.2rem;
+        border-radius: 11.2px;
+    } 
+
+    .toggleLanguage__dot {
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;
+    }
+
+    @keyframes dot-leftToRight {
+        0% {
+            margin-right: 20px;
+        }
+        100% {
+            margin-right: 0px;
+        }
+    }
+
+    @keyframes dot-rightToLeft {
+        0% {
+            margin-left: 20px;
+        }
+        100% {
+            margin-left: 0px;
+        }
+    }
+}

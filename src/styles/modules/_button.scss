@@ -1,0 +1,33 @@
+@use '../base/palete';
+
+.button {
+    user-select: none;
+    background-color: lighten(palete.$secundary-color, 7%);
+    color: palete.$tertiary-color;
+    border: none;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 5px 5px darken(palete.$tertiary-color, 17.5%);
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: palete.$tertiary-color;
+      color: palete.$secundary-color;
+    }
+
+    @media (max-width: 760px) {
+      padding: 10.8px;
+      border-radius: 9px;
+      box-shadow: 4.5px 4.5px darken(palete.$tertiary-color, 17.5%);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 360px) {
+        padding: 9.6;
+        border-radius: 8px;
+        box-shadow: 4px 4px darken(palete.$tertiary-color, 17.5%);
+        font-size: 0.8rem;
+    }
+}

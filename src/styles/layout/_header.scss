@@ -1,0 +1,45 @@
+@use '../base/palete';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 3.125rem;
+    background-color: lighten(palete.$secundary-color, 7%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+    .branding__title {
+        font-size: 2rem;
+        font-weight: bold;
+        user-select: none;
+    }
+
+    .header__firstname {
+        color: palete.$tertiary-color;
+    }
+
+    .header__lastname {
+        margin-left: 10px;
+        color: palete.$primary-color;
+    }
+
+    @media (max-width: 760px) {
+        padding: 1rem 1.3rem;
+
+        .header__lastname {
+            margin-left: 0px;
+        }
+
+        .branding {
+            padding-top: 8px;
+        }
+    }
+
+    @media (max-width: 360px) {
+        padding: 1rem 0.7rem;
+        
+        span {
+            font-size: 1.8rem;
+        }
+    }
+}
