@@ -1,0 +1,41 @@
+@use '../../base/palete';
+
+.branding {
+    /*background-color: #121212;
+    padding: 20px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;*/
+
+    & > div {
+        display: flex;
+    }
+
+    @media (max-width: 780px) {
+        & {
+            display: none;
+            justify-content: center;
+        }
+    }
+}
+
+.branding__title {
+    color: palete.$tertiary-color;
+    font-size: 30px;
+    margin-left: 5px;
+    user-select: none;
+    font-weight: bold;
+}
+
+.branding__title--lastName {
+    color: palete.$primary-color;
+    margin-left: 15px;
+}
+
+.branding__hr {
+    width: 340px;
+    height: 3px;
+    background-image: linear-gradient(90deg, palete.$tertiary-color, palete.$primary-color);
+}

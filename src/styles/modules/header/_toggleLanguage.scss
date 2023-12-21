@@ -17,19 +17,11 @@
     color: palete.$tertiary-color;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 780px) {
+
     .toggleLanguage__leftLabel, .toggleLanguage__rightLabel {
         font-size: 0.9rem;
-    }
-
-    .toggleLanguage__leftLabel {
         padding-top: 4px;
-        padding-right: 8px;
-    }
-
-    .toggleLanguage__rightLabel {
-        padding-top: 4px;
-        padding-left: 8px;
     }
 }
 

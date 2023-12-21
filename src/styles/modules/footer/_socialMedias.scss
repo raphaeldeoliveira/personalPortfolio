@@ -1,0 +1,62 @@
+@use '../../base/palete';
+
+.socialMedias {
+    display: flex;
+}
+
+.socialMedias__button {
+    width: 70px;
+    height: 70px;
+    margin-left: 15px;
+    display: block;
+    text-decoration: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #333;
+    }
+
+    @media (max-width: 380px) {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.socialMedias__button--email {
+
+    @extend .socialMedias__button;
+
+    border: none;
+    padding: 0;
+    background: none;
+    position: relative;
+
+    .email__label {
+        color: palete.$tertiary-color;
+        display: none;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        background-color: #333;
+        font-size: 18px;
+        text-align: center;
+        z-index: 0;
+        position: absolute;
+        top: 14px;
+        left: -8px;
+    }
+
+    .email__label--brLang {
+        @extend .email__label;
+        left: -14px;
+    }
+
+    .email__icon {
+        z-index: 1;
+        position: absolute;
+    }
+}

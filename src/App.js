@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Button from "./components/atoms/Button";
 
 import Header from "./components/organisms/Header";
+import IntroductionSection from "./components/organisms/IntroductionSection";
+import Footer from "./components/organisms/Footer";
 
 import './styles/main.scss'
 
@@ -24,6 +26,12 @@ function App() {
         mobile={mobile}
         english={english}
         toggleLanguage={toggleLanguage}
+      />
+      <IntroductionSection 
+        english={english}
+      />
+      <Footer 
+        english={english}
       />
     </div>
   );

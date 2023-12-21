@@ -10,7 +10,9 @@ export default function Header(props) {
 
     return (
         <header className="header">
-            <Branding />
+            <Branding
+                mobile={props.mobile}
+            />
             <Navbar 
                 english={props.english}
                 toggleLanguage={props.toggleLanguage}
