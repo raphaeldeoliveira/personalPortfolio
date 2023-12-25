@@ -1,6 +1,8 @@
 @use './base/reset.scss';
 @use './base/typography';
+@use './base/scrollbar';
+@use './base/palete';
 
 body {
-    background-color: black;
+    background-color: lighten(palete.$secundary-color, 4.8%);
 }

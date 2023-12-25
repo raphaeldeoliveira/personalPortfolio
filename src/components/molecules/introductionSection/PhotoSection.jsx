@@ -9,7 +9,9 @@ export default function PhotoSection(props) {
 
     return (
         <div className="photo-section">
-            <FlipPhoto />
+            <FlipPhoto 
+                resumeActive={props.resumeActive}
+            />
             <PhotoLabel 
                 english={props.english}
             />

@@ -1,0 +1,139 @@
+@use '../../base/palete';
+@use './carrousel';
+
+.card-section {
+    width: 93vw;
+    margin-top: 2vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.75vw;
+    justify-items: center;
+    align-items: center;
+    margin: auto;
+
+    @media (max-width: 780px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 6vw;
+        width: 100%;
+    }
+}
+
+.card-section__card {
+    cursor: pointer;
+    border-radius: 15px;
+    margin-top: 1.5vw;
+    margin-bottom: 1.5vw;
+    display: flex;
+    user-select: none;
+
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+
+    h4 {
+        font-size: 1.5vw;
+        font-weight: bold;
+        padding: 1.5vw 20px;
+    }
+
+    p {
+        font-size: 1.2vw;
+        padding: 0px 20px;
+    }
+
+    .seccao-textos {
+        width: 25vw;
+    }
+
+    @media (max-width: 940px) {
+        margin-bottom: 1vw;
+    }
+
+    @media (max-width: 860px) {
+        margin-bottom: 0.5vw;
+    }
+
+    @media (max-width: 780px) {
+        width: auto;
+    
+        .seccao-textos {
+            //width: 47.17vw;
+            width: 80vw;
+            margin: auto;
+        }
+    
+        h4 {
+            font-size: 2.83vw;
+            font-weight: bold;
+            padding: 2.83vw 2.5vw;
+        }
+
+        p { 
+            font-size: 2.26vw;
+            padding: 0px 2.5vw;
+        }
+    
+    }
+}
+
+.card-section__card--darkMode {
+    @extend .card-section__card;
+    background-color: #252525;
+    color: white
+}
+
+.card-section__card--lightMode {
+    @extend .card-section__card;
+    // alterar esse bg-color pelo mesmo percentual que o dark é clareado, mas escurecendo o branco
+    background-color: white;
+    color: black
+}
+
+.card-section__card--mobile {
+    @extend .card-section__card;
+
+    // ver o que tem de estilo igual e diferente
+    cursor: pointer;
+    border-radius: 15px;
+    margin: 1.5vw 0px;
+    user-select: none;
+    width: 85%;
+    flex-direction: column;
+
+    transition: all 0.3s ease-in-out;
+
+    h4 {
+        font-size: 7.4vw;
+        font-weight: bold;
+        padding: 4.5vw 0px;
+        text-align: center;
+        //width: 100%;
+        width: 80%;
+        margin: auto;
+    }
+
+    p {
+        font-size: 5.22vw;
+        padding: 0px 20px;
+        padding-bottom: 6vw;
+        width: 75%;
+        margin: auto;
+    }
+}
+
+.card__mobile--darkMode {
+    @extend .card-section__card--mobile;
+    background-color: #252525;
+    color: white
+}
+
+.card__mobile--lightMode {
+    @extend .card-section__card--mobile;
+    // alterar esse bg-color pelo mesmo percentual que o dark é clareado, mas escurecendo o branco
+    background-color: white;
+    color: black
+}

@@ -1,21 +1,6 @@
 .introductionSection {
     display: flex;
     font-size: 16px;
-
-    // esse .conteudoCentral vai virar estilo de uma molecula especifica
-    /*.conteudoCentral {
-        width: 50%;
-        //margin: auto;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-    
-    @media (max-width: 1150px) {
-        .conteudoCentral {
-            width: 55%;
-        }
-    }*/
     
     @media (max-width: 780px) {
         flex-direction: column;

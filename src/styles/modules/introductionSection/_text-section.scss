@@ -1,0 +1,30 @@
+@use '../../base/palete';
+@use '../../modules/introductionSection/curriculum';
+@use '../../modules/introductionSection/resume';
+
+$react-font: #61DAFB;
+$react-bg: lighten(palete.$secundary-color, 18%);
+$spring-font: palete.$tertiary-color;
+$spring-bg: #6FB440;
+$java-font: #F20505;
+$java-bg: darken(palete.$tertiary-color, 5%);
+
+.text-section {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @media (max-width: 1150px) {
+        width: 55%;
+    }
+    
+    @media (max-width: 780px) {
+        // esse estilo era aplicado no pai -> ?????
+        flex-direction: column;
+    
+        // esses não
+        width: 100%;
+        margin-bottom: 6vw;
+    }
+}

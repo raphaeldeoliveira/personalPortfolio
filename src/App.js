@@ -3,6 +3,8 @@ import Button from "./components/atoms/Button";
 
 import Header from "./components/organisms/Header";
 import IntroductionSection from "./components/organisms/IntroductionSection";
+import CardSection from "./components/organisms/CardSection";
+import ProjectsSection from "./components/organisms/ProjectsSection";
 import Footer from "./components/organisms/Footer";
 
 import './styles/main.scss'
@@ -29,6 +31,13 @@ function App() {
       />
       <IntroductionSection 
         english={english}
+      />
+      <CardSection 
+        mobile={mobile}
+        english={english}
+      />
+      <ProjectsSection 
+      
       />
       <Footer 
         english={english}

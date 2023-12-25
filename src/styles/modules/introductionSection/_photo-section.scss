@@ -15,16 +15,41 @@
     }
 }
 
-.photo-section__flip {
+.photo-section__div {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    margin: auto;
+}
 
+.photo-section__flip {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease-in-out;
+    display: flex;
+    justify-content: space-around;
+
+    img {
+        user-select: none;
+        width: 400px;
+        margin-top: 45px;
+        border: 10px solid white;
+        border-radius: 50%;
+        position: absolute;
+        backface-visibility: hidden;
+    }
 }
 
 .photo-section__flip__back {
-    
+    transform: rotateY(180deg);
 }
 
 .photo-section__flip__front {
     
+}
+
+.fliping {
+    transform: rotateY(180deg) translateX(0px);
 }
 
 .photo-section__label {
