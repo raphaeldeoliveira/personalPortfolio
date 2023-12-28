@@ -1,28 +1,24 @@
 import React, { useState } from "react";
 
 import NavButtons from "./NavButtons";
+import Title from "../../atoms/projectsSection/Title";
 
-export default function NavProjects() {
-
-    const [currentProject, setCurrentProject] = useState(0)
-
-    function moveUp() {
-        setCurrentProject((prevState) => {
-            return prevState === 0 ? 2 : prevState === 1 ? 0 : 1
-        })
-    }
-
-    function moveBottom() {
-        setCurrentProject((prevState) => {
-            return prevState === 0 ? 1 : prevState === 1 ? 2 : 0
-        })
-    }
+export default function NavProjects(props) {
 
     return (
         <div className="projects__header">
             <NavButtons 
-                moveUp={moveUp}
-                moveBottom={moveBottom}
+                moveUp={props.moveUp}
+                moveBottom={props.moveBottom}
+            />
+            <Title 
+                currentProject={props.currentProject}
+                titleTransition={props.titleTransition}
+                links={["", "https://github.com/raphaeldeoliveira/PlataformaEnsino", "https://github.com/raphaeldeoliveira/LojaRoupaApp"]}
+                titles={props.english ? 
+                    ["FIFA BOT Project", "Teaching Platform", "Angel Modas"]
+                     : ["Projeto do FIFA BOT", "Plataforma de ensino", "Angel Modas"]
+                }
             />
         </div>
     )

@@ -1,0 +1,41 @@
+/*.carrousel__images__layout {
+
+}
+
+.carrousel__images {
+
+}
+
+.carrousel__dots {
+
+}
+
+.dots__button {
+
+}*/
+
+.dots__layout {
+    display: flex;
+}
+
+.dots__dot {
+    width: 0.85vw;
+    height: 0.85vw;
+    border-radius: 50%;
+    background-color: #252525;
+    border: 1px solid white;
+    margin: 0px 5px;
+
+    &:hover {
+        background-color: lighten(green, 50%);
+    }
+
+    @media (max-width: 780px) {
+        width: 4vw;
+        height: 4vw;
+    }
+}
+
+.dots__dot--active {
+    background-color: green;
+}

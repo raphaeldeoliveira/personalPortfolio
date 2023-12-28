@@ -5,7 +5,7 @@ import Button from "../../atoms/projectsSection/Button";
 export default function NavButtons(props) {
 
     return (
-        <div className="projects__nav-buttons">
+        <div className="header__nav-buttons">
             <Button 
                 type="top"
                 moveFunction={props.moveUp}

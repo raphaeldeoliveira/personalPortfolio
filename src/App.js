@@ -37,7 +37,8 @@ function App() {
         english={english}
       />
       <ProjectsSection 
-      
+        english={english}
+        mobile={mobile}
       />
       <Footer 
         english={english}

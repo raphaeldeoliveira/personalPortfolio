@@ -1,0 +1,84 @@
+.carrousel__layout {
+    overflow: hidden;
+    position: relative;
+    height: 38vw;
+
+    @media (max-width: 780px) {
+        height: 194vw;
+    }
+}
+
+.carrousel {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.8s ease-in-out;
+}
+
+.panel {
+    margin-bottom: 1.875vw;
+}
+
+.panel__paragraph {
+    font-size: 1.2vw;
+    width: 87%;
+    margin: auto;
+    color: white;
+
+    @media (max-width: 780px) {
+        font-size: 3.5vw;
+        padding: 2.5vw 0px;
+    }
+}
+
+.panel__bottom-section {
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 780px) {
+        flex-direction: column;
+    }
+}
+
+.menu__card {
+    width: 27.5%;
+    margin: 1.5vw 1.125vw;
+
+    @media (max-width: 780px) {
+        margin: auto;
+        width: 88%;
+        margin-top: 2.6vw;
+        margin-bottom: 6vw;
+    }
+}
+
+.menu__layout {
+    border-radius: 15px;
+    color: black;
+    font-size: 1.25vw;
+    height: 29vw;
+
+    @media (max-width: 780px) {
+        font-size: 3vw;
+        height: 45vw;
+    }
+}
+
+.menu__body {
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    background-color: #252525;
+    color: white;
+    border: 1px solid white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #0c0c0c;
+    }
+
+    @media (max-width: 780px) {
+        font-size: 3.5vw;
+    }
+}

@@ -15,7 +15,7 @@
     }
 }
 
-.projects__nav-buttons {
+.header__nav-buttons {
     display: flex;
     flex-direction: column;
     float: left;
@@ -55,4 +55,32 @@
     @media (max-width: 780px) {
         margin-bottom: -0.5vw;
     }
+}
+
+.header__title {
+    font-size: 3.4vw;
+    cursor: pointer;
+    display: inline-block;
+    color: white;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@keyframes titleTransition {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.header__title--transition {
+    animation: titleTransition 1s ease;
 }

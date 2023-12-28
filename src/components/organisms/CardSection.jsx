@@ -2,19 +2,19 @@ import React from "react";
 
 import '../../styles/modules/cardSection/_cardSection.scss';
 
-import photoAngelModas1 from "../../assets/images/project-cards/angelProject1.png";
-import photoAngelModas2 from "../../assets/images/project-cards/angelProject2.png";
-import photoAngelModas3 from "../../assets/images/project-cards/angelProject5.png";
+import photoAngelModas1 from "../../assets/images/cards-images/angelProject1.png";
+import photoAngelModas2 from "../../assets/images/cards-images/angelProject2.png";
+import photoAngelModas3 from "../../assets/images/cards-images/angelProject5.png";
 
-import photoFifa1 from "../../assets/images/project-cards/fifaProject.png";
-import photoFifa2 from "../../assets/images/project-cards/fifaProject2.png";
-import photoFifa3 from "../../assets/images/project-cards/fifaProject3.png";
+import photoFifa1 from "../../assets/images/cards-images/fifaProject.png";
+import photoFifa2 from "../../assets/images/cards-images/fifaProject2.png";
+import photoFifa3 from "../../assets/images/cards-images/fifaProject3.png";
 
-import photoProjExt1 from "../../assets/images/project-cards/projectWilson2.png";
-import photoProjExt2 from "../../assets/images/project-cards/projectWilson3.png";
-import photoProjExt3 from "../../assets/images/project-cards/projetoWilson.png";
+import photoProjExt1 from "../../assets/images/cards-images/projectWilson2.png";
+import photoProjExt2 from "../../assets/images/cards-images/projectWilson3.png";
+import photoProjExt3 from "../../assets/images/cards-images/projetoWilson.png";
 
-import photoLeetcode from "../../assets/images/project-cards/leetcode.png"
+import photoLeetcode from "../../assets/images/cards-images/leetcode.png"
 
 import Card from "../molecules/cardSection/Card";
 

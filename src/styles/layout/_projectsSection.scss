@@ -1,5 +1,13 @@
 @use '../modules/projectsSection/projects__header';
+@use '../modules/projectsSection/carrousel__panels';
+@use '../modules/projectsSection/carrousel__images';
 
 .projects {
+    padding: 2vw 3.75vw;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
 
+    #correct-position-behavior {
+        margin-bottom: 16px;
+    }
 }
