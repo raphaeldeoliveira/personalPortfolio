@@ -1,18 +1,38 @@
-/*.carrousel__images__layout {
+.carrousel__images__layout {
+    margin: auto;
+    width: 51.6vw;
+    height: 29vw;
+    margin: 1.5vw;
+    border-radius: 15px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
 
+    @media (max-width: 780px) {
+        margin: auto;
+        width: 81vw;
+        height: 100vw;
+    }
 }
 
 .carrousel__images {
+    width: 2400px;
+    display: flex;
+    transition: transform 0.8s ease-in-out;
 
+    @media (max-width: 780px) {
+        width: 3800px;
+    }
 }
 
-.carrousel__dots {
+.carrousel__images__image {
+    width: 60vw;
+    border-radius: 15px;
 
+    @media (max-width> 780px) {
+        width: 81vw;
+    }
 }
-
-.dots__button {
-
-}*/
 
 .dots__layout {
     display: flex;
@@ -26,10 +46,6 @@
     border: 1px solid white;
     margin: 0px 5px;
 
-    &:hover {
-        background-color: lighten(green, 50%);
-    }
-
     @media (max-width: 780px) {
         width: 4vw;
         height: 4vw;
@@ -38,4 +54,44 @@
 
 .dots__dot--active {
     background-color: green;
+}
+
+.dots__button__layout {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 780px) {
+        font-size: 8vw;
+        margin-top: 2vw;
+        margin-bottom: 1.2vw;
+    }
+}
+
+.dots__button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+
+    font-size: 1.6vw;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+        color: green;
+        transition: color 200ms ease;
+    }
+
+    &:first-of-type {
+        margin-right: 3px;
+    }
+
+    &:last-of-type {
+        margin-left: 6px;
+    }
 }

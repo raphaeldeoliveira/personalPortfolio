@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
 import CarrouselImages from "../carrouselImages/CarrouselImages"
 import CarrouselDots from "./CarrouselDots";
 
 export default function CarrouselImagesLayout(props) {
+    
+    const [scrollX, setScrollX] = useState(0)
+    const [currentDot, setCurrentDot] = useState(0)
 
     return (
-        <div className="carrousel__images__layout">
+        <div>
             <CarrouselImages 
                 images={props.images}
+                scrollX={scrollX}
             />
             <CarrouselDots 
-                numberDots={props.images.length}
+                images={props.images}
+                currentDot={currentDot}
+                setScrollX={setScrollX}
+                setCurrentDot={setCurrentDot}
             />
         </div>
     )

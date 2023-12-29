@@ -8,13 +8,13 @@
     }
 }
 
-.carrousel {
+.carrousel__inside {
     display: flex;
     flex-direction: column;
     transition: transform 0.8s ease-in-out;
 }
 
-.panel {
+.panel__layout {
     margin-bottom: 1.875vw;
 }
 
@@ -63,6 +63,34 @@
     }
 }
 
+.menu__paragraph {
+    padding: 2vw;
+
+    @media (max-width: 780px) {
+        padding: 4vw;
+    }
+}
+
+.menu__header {
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    background-color: #252525;
+    color: white;
+    border: 1px solid white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #0c0c0c;
+    }
+
+    @media (max-width: 780px) {
+        font-size: 3.5vw;
+    }
+}
+
 .menu__body {
     padding: 10px;
     margin: auto;
@@ -80,5 +108,61 @@
 
     @media (max-width: 780px) {
         font-size: 3.5vw;
+    }
+}
+
+.menu__options {
+    width: 25vw;
+    background-color: #252525;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 1.2vw;
+    margin-top: 15px;
+    display: none;
+
+    @media (max-width: 780px) {
+        width: 81vw;
+        margin:  auto;
+        font-size: 3.5vw;
+    }
+}
+
+.menu__options--mobile {
+    // acho que esses margin-bottom estão com valores invertidos
+    margin-bottom: 1.5vw;
+    
+    &:first-of-type {
+        margin-bottom: 16vw;
+    }
+}
+
+.menu__options__section {
+    cursor: pointer;
+    text-align: center;
+    padding: 20px 0px;
+    color: white;
+
+    &:not(:last-of-type) {
+        border-bottom: 1px solid white;
+    }
+
+    &:not(:last-of-type):not(:first-of-type):hover {
+        background-color: green;
+    }    
+
+    &:first-of-type:hover {
+        background-color: green;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    &:last-of-type:hover {
+        background-color: green;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    @media (max-width: 780px) {
+        padding: 5.1vw 0px;
     }
 }

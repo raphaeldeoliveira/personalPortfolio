@@ -1,19 +1,17 @@
 import React from "react";
 
-import Dot from "../../../atoms/projectsSection/carrouselImages/Dot";
-
 import DotsLayout from "./DotsLayout";
-import Button from "../../../atoms/projectsSection/carrouselImages/Button";
 
 export default function CarrouselDots(props) {
 
     return (
         <div className="carrousel__dots">
-            <Button />
             <DotsLayout 
-                numberDots={props.numberDots}
+                images={props.images}
+                currentDot={props.currentDot}
+                setScrollX={props.setScrollX}
+                setCurrentDot={props.setCurrentDot}
             />
-            <Button />
         </div>
     )
 }

@@ -7,7 +7,7 @@ export default function MenuHeader(props) {
             className="menu__header"
             onClick={props.toggleMenu}
         >
-
+            <span>{props.activeOption}</span>
         </div>
     )
 }
