@@ -1,0 +1,224 @@
+@use '../base/palete';
+
+// Applied on body element
+.lightmode {
+    background-color: darken(palete.$tertiary-color, 4.8%);
+    
+    .header {
+        background-color: darken(palete.$tertiary-color, 7%);
+
+        .button {
+            background-color: darken(palete.$tertiary-color, 7%);
+            color: palete.$secundary-color;
+            box-shadow: 5px 5px lighten(palete.$secundary-color, 17.5%);
+    
+            &:hover {
+                background-color: palete.$secundary-color;
+                color: palete.$tertiary-color;
+            }
+    
+            @media (max-width: 780px) {
+                box-shadow: 4.5px 4.5px lighten(palete.$secundary-color, 17.5%);
+            }
+          
+            @media (max-width: 360px) {
+                box-shadow: 4px 4px lighten(palete.$secundary-color, 17.5%);
+            }
+        }
+
+        .header__firstname {
+            color: palete.$secundary-color;
+        }
+    
+        .header__lastname {
+            color: palete.$quaternary-color;
+        }
+        .toggleLanguage__bg--enable {
+            background-color: palete.$quaternary-color;
+        }
+
+        .toggleLanguage__leftLabel--enable, .toggleLanguage__rightLabel--enable {
+            color: palete.$secundary-color;
+        }
+
+        .toggleLanguage__bg--disable {
+            background-color: palete.$secundary-color;
+        }
+
+        .toggleLanguage__dot {
+            background-color: darken(palete.$tertiary-color, 50%);
+        }
+    }
+
+    .introductionSection {
+        .photo-section__flip {
+            img {
+                border: 10px solid palete.$secundary-color;
+            }
+        }
+
+        .photo-section__label {
+            color: palete.$secundary-color;
+        }
+
+        .resume {
+            color: palete.$secundary-color;
+
+            .resume__title {
+                text-shadow: 10px 10px palete.$tertiary-color;
+
+                @media (max-width: 1150px) {
+                    text-shadow: 7.5px 7.5 palete.$tertiary-color;
+                }
+
+                @media (max-width: 780px) {
+                    text-shadow: 2vw 2vw palete.$tertiary-color;
+                }
+            }
+            .resume__title--lastName {
+                color: palete.$quaternary-color;
+                text-shadow: 10px 10px palete.$tertiary-color;
+
+                @media (max-width: 1150px) {
+                    text-shadow: 7.5px 7.5 palete.$tertiary-color;
+                }
+
+                @media (max-width: 780px) {
+                    text-shadow: 2vw 2vw palete.$tertiary-color;
+                }
+            }
+            .tec-labels--react {
+                background-color: #61DAFB;
+                color: #2E2E2E;
+            }
+            
+            .tec-labels--java {
+                background-color: #F20505;
+                color: #F2F2F2;
+            }
+        }
+
+        .button--resume {
+            background-color: lighten(palete.$secundary-color, 95.3%);
+            color: palete.$secundary-color;
+            box-shadow: 5px 5px lighten(palete.$secundary-color, 17.5%);
+
+            &:hover {
+                background-color: palete.$secundary-color;
+                color: palete.$tertiary-color;
+            }
+
+            @media (max-width: 780px) {
+                box-shadow: 4.5px 4.5px lighten(palete.$secundary-color, 17.5%);
+            }
+
+            @media (max-width: 360px) {
+                box-shadow: 4px 4px lighten(palete.$secundary-color, 17.5%);
+            }
+        }
+    }
+
+    .card-section {
+        .card-section__card--darkMode {
+            background-color: white;
+            color: black;
+        }
+        .card-section__card--lightMode {
+            background-color: #252525;
+            color: white;
+        }
+        .carrousel {
+            span:hover {
+                background-color: hsla(
+                    hue(palete.$quaternary-color),
+                    saturation(palete.$quaternary-color),
+                    lightness(palete.$quaternary-color),
+                    0.712
+                );
+            }
+        }
+    }
+
+    .projects {
+        .nav-buttons__button {
+            color: palete.$secundary-color;
+
+            &:hover {
+                color: palete.$quaternary-color;
+            }
+        }
+
+        .header__title {
+            color: palete.$secundary-color;
+        }
+
+        .panel__paragraph {
+            color: palete.$secundary-color;
+        }
+
+        .menu__header {
+            background-color: darken(white, 14.5%);
+            color: black;
+            border: 1px solid black;
+        }
+
+        .dots__dot {
+            background-color: darken(white, 14.5%);
+            border: 1px solid black;
+        }
+
+        .dots__dot--active {
+            background-color: palete.$quaternary-color;
+        }
+
+        .dots__button {
+            color: black;
+            &:hover {
+                color: palete.$quaternary-color;
+            }
+        }
+    }
+
+    .footer {
+        background-color: darken(white, 7%);
+
+        .branding__title {
+            color: palete.$secundary-color;
+        }
+
+        .branding__title--lastName {
+            color: palete.$quaternary-color;
+        }
+
+        .branding__hr {
+            background-image: linear-gradient(90deg, palete.$secundary-color, palete.$quaternary-color);
+        }
+
+        .socialMedias__button {
+            &:hover {
+                background-color: darken(white, 20%);
+            }
+        }
+        .socialMedias__button--email {
+            &:hover {
+                background-color: darken(white, 20%);
+            }
+
+            .email__label {
+                color: palete.$secundary-color;
+                background-color: darken(white, 20%);
+            }
+
+            .email__label--brLang {
+                color: palete.$secundary-color;
+                background-color: darken(white, 20%);
+            }
+        }
+
+        .color--lightModeOn {
+            color: black;
+        }
+        
+    }
+
+}

@@ -13,6 +13,7 @@ function App() {
 
   const [mobile, setMobile] = useState(false)
   const [english, setEnglish] = useState(false)
+  const [lightTheme, setLightTheme] = useState(false)
 
   useEffect(() => {
     setMobile(window.innerWidth <= 780 ? true : false)
@@ -28,6 +29,8 @@ function App() {
         mobile={mobile}
         english={english}
         toggleLanguage={toggleLanguage}
+        lightTheme={lightTheme}
+        setLightTheme={setLightTheme}
       />
       <IntroductionSection 
         english={english}
@@ -42,6 +45,7 @@ function App() {
       />
       <Footer 
         english={english}
+        lightTheme={lightTheme}
       />
     </div>
   );

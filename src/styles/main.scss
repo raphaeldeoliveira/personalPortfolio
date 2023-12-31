@@ -6,3 +6,8 @@
 body {
     background-color: lighten(palete.$secundary-color, 4.8%);
 }
+
+// Themes transition
+* {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}

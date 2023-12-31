@@ -1,5 +1,7 @@
+@use '../base/palete';
+
 .footer {
-    background-color: #121212;
+    background-color: lighten(black, 7%);
     padding: 20px;
     user-select: none;
     display: flex;

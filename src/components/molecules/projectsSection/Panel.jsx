@@ -17,6 +17,7 @@ export default function Panel(props) {
                 />
                 <CarrouselImagesLayout 
                     images={props.images}
+                    mobile={props.mobile}
                 />
             </div>
             

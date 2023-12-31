@@ -11,7 +11,8 @@ export default function Footer(props) {
     return (
         <footer className="footer">
             <Branding />
-            <SocialMedias 
+            <SocialMedias
+                lightTheme={props.lightTheme}
                 english={props.english}
             />
         </footer>

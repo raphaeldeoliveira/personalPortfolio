@@ -82,15 +82,15 @@
 
 .card-section__card--darkMode {
     @extend .card-section__card;
-    background-color: #252525;
-    color: white
+    background-color: lighten(black, 14.5%);
+    color: white;
 }
 
 .card-section__card--lightMode {
     @extend .card-section__card;
     // alterar esse bg-color pelo mesmo percentual que o dark é clareado, mas escurecendo o branco
     background-color: white;
-    color: black
+    color: black;
 }
 
 .card-section__card--mobile {

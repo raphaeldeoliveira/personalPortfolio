@@ -16,6 +16,7 @@
     
     .resume__title--lastName {
         @extend .resume__title;
+        text-shadow: 10px 10px palete.$secundary-color;
         color: palete.$primary-color;
         margin-left: 80px;
     }
@@ -31,11 +32,12 @@
         
         .resume__title {
             font-size: 3.375rem;
-            text-shadow: 7.5px 7.5 palete.$secundary-color;
+            text-shadow: 7.5px 7.5px palete.$secundary-color;
         }
         
         .resume__title--lastName {
             margin-left: 60px;
+            text-shadow: 7.5px 7.5px palete.$secundary-color;
         }
         
         .resume__paragraph {
@@ -54,6 +56,10 @@
     
         .resume__title {
             font-size: 12vw;
+            text-shadow: 2vw 2vw palete.$secundary-color;
+        }
+
+        .resume__title--lastName {
             text-shadow: 2vw 2vw palete.$secundary-color;
         }
     

@@ -40,11 +40,13 @@ export default function ProjectsSection(props) {
     function moveUp() {
         changeTitle("up")
         scrollPanels("up")
+        setTimeout(() => { }, 1000)
     }
 
     function moveBottom() {
         changeTitle("bottom")
         scrollPanels("bottom")
+        setTimeout(() => { }, 1000)
     }
 
     return (

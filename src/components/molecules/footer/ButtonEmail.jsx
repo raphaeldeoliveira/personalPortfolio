@@ -32,7 +32,7 @@ export default function ButtonEmail(props) {
         <MdMailOutline 
             className="email__icon" 
             size={50} 
-            color="white" 
+            color={props.lightTheme ? "black" : "white"}
             style={{ display: showDialogMsg ? "none" : "inline" }}
         />
     </button>
