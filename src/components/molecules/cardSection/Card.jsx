@@ -32,7 +32,7 @@ export default function Card(props) {
             <button 
                 className={props.lightMode ? "card-section__card--2" : "card-section__card--1"}
             >
-                <div onClick={() => scrollToProject()} className="seccao-textos">
+                <div onClick={() => scrollToProject()} className="card__text-section">
                     <h4>{props.title}</h4>
                     <p>{props.description}</p>
                 </div>
@@ -48,8 +48,8 @@ export default function Card(props) {
                 <CarrouselImages
                     images={props.images}
                 />
-                <div onClick={() => props.scrollTo(props.currentId)} className="seccao-textos">
-                    <h4>{props.title}</h4>
+                <div onClick={() => props.scrollTo(props.currentId)} className="text-section">
+                    <h4 className="text-section__title">{props.title}</h4>
                     <p>{props.description}</p>
                 </div>
             </button>

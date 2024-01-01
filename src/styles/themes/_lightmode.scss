@@ -2,7 +2,6 @@
 
 // Applied on body element
 .lightmode {
-    //background-color: darken(palete.$tertiary-color, 4.8%);
     background-color: darken(palete.$tertiary-color, 5.5%);
     font-family: 'Comic Sans MS', cursive, sans-serif;
     
@@ -35,6 +34,7 @@
         .header__lastname {
             color: palete.$quaternary-color;
         }
+
         .toggleLanguage__bg--enable {
             background-color: palete.$quaternary-color;
         }
@@ -44,11 +44,11 @@
         }
 
         .toggleLanguage__bg--disable {
-            background-color: palete.$secundary-color;
+            background-color: darken(white, 30%);
         }
 
         .toggleLanguage__dot {
-            background-color: darken(palete.$tertiary-color, 50%);
+            background-color: #333;
         }
     }
 
@@ -133,7 +133,7 @@
             border: 2px dashed black;
         }
         .card-section__card--2 {
-            background-color: #252525;
+            background-color: lighten(black, 20%);
             color: white;
         }
         .carrousel {
@@ -144,6 +144,18 @@
                     lightness(palete.$quaternary-color),
                     0.712
                 );
+            }
+        }
+
+        .card__text-section {
+            & > h4 {
+                font-family: 'Comic Sans MS', cursive, sans-serif;
+                line-height: 1;
+            }
+
+            & > p {
+                font-family: 'Comic Sans MS', cursive, sans-serif;
+                line-height: 1.3;
             }
         }
     }
@@ -210,6 +222,10 @@
             &:last-of-type:hover {
                 background-color: palete.$quaternary-color;
             }
+        }
+
+        .panel__paragraph {
+            line-height: 1;
         }
     }
 

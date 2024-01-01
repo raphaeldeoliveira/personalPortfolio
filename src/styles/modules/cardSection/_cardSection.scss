@@ -41,6 +41,11 @@
         font-size: 1.5vw;
         font-weight: bold;
         padding: 1.5vw 20px;
+        text-align: left;
+    }
+
+    .text-section__title {
+        text-align: left;
     }
 
     p {
@@ -48,7 +53,7 @@
         padding: 0px 20px;
     }
 
-    .seccao-textos {
+    .card__text-section {
         width: 25vw;
     }
 
@@ -63,7 +68,7 @@
     @media (max-width: 780px) {
         width: auto;
     
-        .seccao-textos {
+        .card__text-section {
             //width: 47.17vw;
             width: 80vw;
             margin: auto;
