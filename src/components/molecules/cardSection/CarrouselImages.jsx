@@ -18,6 +18,7 @@ export default function CarrouselImages(props) {
 
         if (props.images.length === 1) {
             return <img 
+                alt=""
                 key={1}
                 className={(activeImage === 0) ? "imagem-ativa" : ""}
                 src={props.images[0]}
@@ -25,6 +26,7 @@ export default function CarrouselImages(props) {
         } else {
             return props.images.map((image, index) => (
                 <img 
+                    alt=""
                     key={index}
                     className={(activeImage === index) ? "imagem-ativa" : ""}
                     src={image}

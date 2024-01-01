@@ -1,14 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 
 export default function CarrouselImages(props) {
+    const convertScrollX = useCallback(() => {
+        return props.mobile ? (props.currentDot * -81) : (props.currentDot * -51.6);
+    }, [props.mobile, props.currentDot]);
 
     useEffect(() => {
-        convertScrollX()
-    }, [props.currentDot, convertScrollX])
-
-    function convertScrollX() {
-        return props.mobile ? (props.currentDot * -81) : (props.currentDot * -51.6)
-    }
+        convertScrollX();
+    }, [convertScrollX, props.currentDot]);
 
     return (
         <div className="carrousel__images__layout">
@@ -19,10 +18,9 @@ export default function CarrouselImages(props) {
                 }}
             >
                 {props.images.map((image, index) => (
-                    //alert(`index: ${index}`),
-                    <img className="carrousel__images__image" src={image} />
+                    <img key={index} className="carrousel__images__image" src={image} />
                 ))}
             </div>
         </div>
-    )
+    );
 }
