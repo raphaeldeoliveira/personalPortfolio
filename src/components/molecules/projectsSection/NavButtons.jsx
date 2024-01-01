@@ -14,7 +14,6 @@ export default function NavButtons(props) {
                 type="bottom"
                 moveFunction={props.moveBottom}
             />
-            <h1></h1>
         </div>
     )
 }

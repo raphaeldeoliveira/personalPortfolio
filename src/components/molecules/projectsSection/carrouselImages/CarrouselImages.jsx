@@ -4,7 +4,7 @@ export default function CarrouselImages(props) {
 
     useEffect(() => {
         convertScrollX()
-    }, [props.currentDot])
+    }, [props.currentDot, convertScrollX])
 
     function convertScrollX() {
         return props.mobile ? (props.currentDot * -81) : (props.currentDot * -51.6)
