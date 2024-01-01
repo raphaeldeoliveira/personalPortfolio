@@ -21,7 +21,7 @@ export default function CarrouselImages(props) {
                 key={1}
                 className={(activeImage === 0) ? "imagem-ativa" : ""}
                 src={props.images[0]}
-                alt={`Image ${1}`}
+                alt={`Image leetcode`}
             />
         } else {
             return props.images.map((image, index) => (

@@ -9,7 +9,7 @@ export default function Footer(props) {
 
 
     return (
-        <footer className="footer">
+        <footer id="contact" className="footer">
             <Branding />
             <SocialMedias
                 lightTheme={props.lightTheme}

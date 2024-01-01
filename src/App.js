@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Button from "./components/atoms/Button";
 
 import Header from "./components/organisms/Header";
 import IntroductionSection from "./components/organisms/IntroductionSection";
@@ -14,6 +13,7 @@ function App() {
   const [mobile, setMobile] = useState(false)
   const [english, setEnglish] = useState(false)
   const [lightTheme, setLightTheme] = useState(false)
+  const [scrollY, setScrollY] = useState(0)
 
   useEffect(() => {
     setMobile(window.innerWidth <= 780 ? true : false)
@@ -38,10 +38,13 @@ function App() {
       <CardSection 
         mobile={mobile}
         english={english}
+        setScrollY={setScrollY}
       />
       <ProjectsSection 
         english={english}
         mobile={mobile}
+        scrollY={scrollY}
+        setScrollY={setScrollY}
       />
       <Footer 
         english={english}

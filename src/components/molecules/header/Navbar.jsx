@@ -17,9 +17,11 @@ export default function Navbar(props) {
             />
             <Button 
                 buttonTitle={props.english ? "Projects" : "Projetos"}
+                scrollTo={props.scrollTo}
             />
             <Button 
                 buttonTitle={props.english ? "Contact" : "Contato"}
+                scrollTo={props.scrollTo}
             />
             <ToggleLanguage 
                 toggleLanguage={props.toggleLanguage}

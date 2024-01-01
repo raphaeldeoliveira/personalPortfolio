@@ -2,7 +2,9 @@
 
 // Applied on body element
 .lightmode {
-    background-color: darken(palete.$tertiary-color, 4.8%);
+    //background-color: darken(palete.$tertiary-color, 4.8%);
+    background-color: darken(palete.$tertiary-color, 5.5%);
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     
     .header {
         background-color: darken(palete.$tertiary-color, 7%);
@@ -99,6 +101,7 @@
         }
 
         .button--resume {
+            margin-top: 50px;
             background-color: lighten(palete.$secundary-color, 95.3%);
             color: palete.$secundary-color;
             box-shadow: 5px 5px lighten(palete.$secundary-color, 17.5%);
@@ -116,14 +119,20 @@
                 box-shadow: 4px 4px lighten(palete.$secundary-color, 17.5%);
             }
         }
+
+        .curriculum {
+            background-color: darken(palete.$tertiary-color, 14.5%);
+            color: palete.$secundary-color;
+        }
     }
 
     .card-section {
-        .card-section__card--darkMode {
+        .card-section__card--1 {
             background-color: white;
             color: black;
+            border: 2px dashed black;
         }
-        .card-section__card--lightMode {
+        .card-section__card--2 {
             background-color: #252525;
             color: white;
         }
@@ -177,10 +186,36 @@
                 color: palete.$quaternary-color;
             }
         }
+
+        .menu__options {
+            background-color: darken(white, 14.5%);
+            border: 1px solid black;
+        }
+
+        .menu__options__section {
+            color: black;
+        
+            &:not(:last-of-type) {
+                border-bottom: 1px solid black;
+            }
+        
+            &:not(:last-of-type):not(:first-of-type):hover {
+                background-color: palete.$quaternary-color;
+            }    
+        
+            &:first-of-type:hover {
+                background-color: palete.$quaternary-color;
+            }
+        
+            &:last-of-type:hover {
+                background-color: palete.$quaternary-color;
+            }
+        }
     }
 
     .footer {
-        background-color: darken(white, 7%);
+        background-color: darken(white, 12%);
+        border-top: 2px dashed black;
 
         .branding__title {
             color: palete.$secundary-color;
@@ -196,22 +231,24 @@
 
         .socialMedias__button {
             &:hover {
-                background-color: darken(white, 20%);
+                background-color: darken(white, 30%);
             }
         }
         .socialMedias__button--email {
             &:hover {
-                background-color: darken(white, 20%);
+                background-color: darken(white, 30%);
             }
 
             .email__label {
                 color: palete.$secundary-color;
-                background-color: darken(white, 20%);
+                background-color: darken(white, 10%);
+                border: 2px dashed black;
             }
 
             .email__label--brLang {
                 color: palete.$secundary-color;
-                background-color: darken(white, 20%);
+                background-color: darken(white, 10%);
+                border: 2px dashed black;
             }
         }
 

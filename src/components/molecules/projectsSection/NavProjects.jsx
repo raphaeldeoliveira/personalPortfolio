@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import NavButtons from "./NavButtons";
 import Title from "../../atoms/projectsSection/Title";
