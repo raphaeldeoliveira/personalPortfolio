@@ -18,7 +18,12 @@ export default function CarrouselImages(props) {
                 }}
             >
                 {props.images.map((image, index) => (
-                    <img key={index} className="carrousel__images__image" src={image} />
+                    <img 
+                        alt=""
+                        key={index} 
+                        className="carrousel__images__image" 
+                        src={image} 
+                    />
                 ))}
             </div>
         </div>
