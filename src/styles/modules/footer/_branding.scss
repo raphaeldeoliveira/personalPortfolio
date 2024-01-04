@@ -4,6 +4,12 @@
     & > div {
         display: flex;
     }
+}
+
+.branding-footer {
+    & > div {
+        display: flex;
+    }
 
     @media (max-width: 780px) {
         & {

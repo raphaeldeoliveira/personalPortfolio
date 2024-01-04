@@ -29,7 +29,7 @@
     width: 60vw;
     border-radius: 15px;
 
-    @media (max-width> 780px) {
+    @media (max-width: 780px) {
         width: 81vw;
     }
 }
@@ -71,8 +71,6 @@
 
 .dots__button {
     border: none;
-    margin: 0;
-    padding: 0;
     width: auto;
     overflow: visible;
     background: transparent;
@@ -93,5 +91,9 @@
 
     &:last-of-type {
         margin-left: 6px;
+    }
+
+    @media (max-width: 780px) {
+        font-size: 4.5vw;
     }
 }

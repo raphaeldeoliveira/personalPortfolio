@@ -4,7 +4,7 @@
     height: 38vw;
 
     @media (max-width: 780px) {
-        height: 194vw;
+        height: 188.5vw;
     }
 }
 
@@ -122,14 +122,16 @@
 
     @media (max-width: 780px) {
         width: 81vw;
-        margin:  auto;
+        //margin: auto;
+        margin-bottom: 5vw;
         font-size: 3.5vw;
     }
 }
 
 .menu__options--mobile {
     // acho que esses margin-bottom estão com valores invertidos
-    margin-bottom: 1.5vw;
+   // margin-bottom: 1.5vw;
+   margin-bottom: 0px;
     
     &:first-of-type {
         margin-bottom: 16vw;

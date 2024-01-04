@@ -2,6 +2,10 @@
 
 .socialMedias {
     display: flex;
+
+    @media (max-width: 780px) {
+        margin: auto;
+    }
 }
 
 .socialMedias__button {

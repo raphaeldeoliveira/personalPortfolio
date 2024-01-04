@@ -16,17 +16,17 @@ function App() {
   const [scrollY, setScrollY] = useState(0)
 
   useEffect(() => {
-
     const updateMobileStatus = () => {
       setMobile(window.innerWidth <= 780);
     }
-
     window.addEventListener("resize", updateMobileStatus);
-
     return () => {
       window.removeEventListener("resize", updateMobileStatus);
     }
+  }, [])
 
+  useEffect(() => {
+    setMobile(window.innerWidth <= 780);
   }, [])
 
   function toggleLanguage() {

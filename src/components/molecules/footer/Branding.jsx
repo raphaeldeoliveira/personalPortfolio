@@ -8,7 +8,7 @@ import BrandingHr from "../../atoms/footer/BrandingHr"
 export default function Branding(props) {
 
     return (
-        <div className="branding">
+        <div className="branding-footer">
             <div>
                 <BrandingTitle 
                     title="RAPHAEL"

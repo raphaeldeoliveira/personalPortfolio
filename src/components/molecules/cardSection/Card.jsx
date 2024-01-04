@@ -43,7 +43,7 @@ export default function Card(props) {
         ) : 
         (
             <button 
-                className={props.lightMode ? "card__mobile--lightMode" : "card__mobile--darkMode"}
+                className={props.lightMode ? "card__mobile--2" : "card__mobile--1"}
             >
                 <CarrouselImages
                     images={props.images}

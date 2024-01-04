@@ -133,13 +133,13 @@
     }
 }
 
-.card__mobile--darkMode {
+.card__mobile--1 {
     @extend .card-section__card--mobile;
     background-color: #252525;
     color: white
 }
 
-.card__mobile--lightMode {
+.card__mobile--2 {
     @extend .card-section__card--mobile;
     // alterar esse bg-color pelo mesmo percentual que o dark é clareado, mas escurecendo o branco
     background-color: white;
