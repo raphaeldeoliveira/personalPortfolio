@@ -14,6 +14,8 @@ function App() {
   const [english, setEnglish] = useState(false)
   const [lightTheme, setLightTheme] = useState(false)
   const [scrollY, setScrollY] = useState(0)
+  const [currentProject, setCurrentProject] = useState(0)
+  const [titleTransition, setTitleTransition] = useState(false)
 
   useEffect(() => {
     const updateMobileStatus = () => {
@@ -33,6 +35,35 @@ function App() {
     setEnglish((prevState) => !prevState)
   }
 
+  function changeTitleCard(position) {
+    if (currentProject !== position) {
+      setTitleTransition(true)
+      setTimeout(() => {
+        setCurrentProject(position)
+      }, 400)
+      setTimeout(() => {
+        setTitleTransition(false)
+      }, 1000)
+    }
+  }
+
+  function changeTitle(type) {
+    if (!titleTransition) {
+        setTitleTransition(true)
+        setTimeout(() => {
+            setCurrentProject((prevState) => {
+                return (type === "up" 
+                    ? (prevState === 0 ? 2 : prevState === 1 ? 0 : 1) 
+                    : (prevState === 0 ? 1 : prevState === 1 ? 2 : 0)
+                )
+            })
+        }, 400)
+        setTimeout(() => {
+            setTitleTransition(false)
+        }, 1000)
+    }
+  }
+
   return (
     <div className="App">
       <Header 
@@ -49,12 +80,16 @@ function App() {
         mobile={mobile}
         english={english}
         setScrollY={setScrollY}
+        changeTitle={changeTitleCard}
       />
       <ProjectsSection 
         english={english}
         mobile={mobile}
         scrollY={scrollY}
         setScrollY={setScrollY}
+        changeTitle={changeTitle}
+        currentProject={currentProject}
+        titleTransition={titleTransition}
       />
       <Footer 
         english={english}
