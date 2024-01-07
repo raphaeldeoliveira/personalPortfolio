@@ -24,6 +24,16 @@
       font-size: 0.9rem;
     }
 
+    @media (max-width: 450px) {
+      user-select: none;
+      background-color: lighten(palete.$secundary-color, 7%);
+      color: palete.$tertiary-color;
+      border: none;
+      text-align: center;
+      padding: 12px;
+      box-shadow: none;
+    }
+
     @media (max-width: 360px) {
         padding: 9.6;
         border-radius: 8px;

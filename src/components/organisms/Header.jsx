@@ -24,6 +24,7 @@ export default function Header(props) {
                 english={props.english}
                 toggleLanguage={props.toggleLanguage}
                 scrollTo={scrollTo}
+                mobile={props.mobile}
             />
         </header>
     )

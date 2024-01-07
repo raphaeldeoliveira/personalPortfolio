@@ -6,7 +6,7 @@ export default function Button(props) {
 
     return (
         <button 
-            className="button"
+            className={"button"}
             onClick={() => props.scrollTo(
                 props.buttonTitle === "Projetos" ? "Projects" 
                 : props.buttonTitle === "Contato" ? "Contact" 
