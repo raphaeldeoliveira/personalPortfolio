@@ -24,7 +24,19 @@
     }
 
     @media (max-width: 780px) {
-        padding: 1rem 1.3rem;
+        //padding: 1rem 1.3rem;
+        padding: 1rem 0px;
+        position: fixed;
+        width: 100%;
+        z-index: 99;
+
+        & > div {
+            margin-left: 1.3rem;
+        }
+
+        & > button {
+            margin-right: 1.3rem;
+        }
 
         .header__lastname {
             margin-left: 0px;

@@ -19,7 +19,7 @@
     }
 }
 
-.navbar--mobile {
+.header__navbar--mobile {
     @extend .navbar;
 
     z-index: 999;
@@ -27,7 +27,36 @@
     position: fixed;
     top: 0;
     right: 0;
-    background-color: peru;
     height: 100vh;
     width: 70%;
+    background-color: lighten(black, 18%);
+
+    & > button {
+        height: 20vh;
+        width: 100%;
+        border: none;
+        background-color: lighten(black, 18%);
+        color: white;
+        font-size: 3.2vw;
+
+        &:hover, &:active {
+            color: lighten(black, 50%);
+        }
+    }
+
+    .mobile__close-open {
+        color: red;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+    }
+}
+
+.mobile__close-open {
+    color: red;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
 }
