@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import NavProjects from "../molecules/projectsSection/NavProjects";
 import CarrouselPanelsLayout from "../molecules/projectsSection/CarrouselPanelsLayout";
