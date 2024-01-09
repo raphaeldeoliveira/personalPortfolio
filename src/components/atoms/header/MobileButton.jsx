@@ -2,12 +2,8 @@ import React from "react";
 
 export default function MobileButton(props) {
 
-    function toggle() {
-
-    }
-
     return <button
-        onClick={props.toggle ? toggle : 
+        onClick={props.toggle ? props.toggleShowMobileMenu : 
             () => props.scrollTo(
                 props.buttonTitle === "Projetos" ? "Projects" 
                 : props.buttonTitle === "Contato" ? "Contact" 

@@ -32,7 +32,7 @@
     background-color: lighten(black, 18%);
 
     & > button {
-        height: 20vh;
+        height: 25vh;
         width: 100%;
         border: none;
         background-color: lighten(black, 18%);
@@ -43,20 +43,59 @@
             color: lighten(black, 50%);
         }
     }
+}
 
-    .mobile__close-open {
-        color: red;
-        margin: 0;
-        padding: 0;
-        border: none;
-        background-color: transparent;
-    }
+.header__navbar--mobile--able {
+    transform: translateX(0);
+    transition: transform 500ms ease;
+}
+
+.header__navbar--mobile--disable {
+    transform: translateX(100%);
+    transition: transform 500ms ease;
 }
 
 .mobile__close-open {
-    color: red;
-    margin: 0;
+    background-color: transparent;
+    margin-top: 10px;
     padding: 0;
     border: none;
-    background-color: transparent;
+
+    position: fixed;
+    right: 0;
+    z-index: 9999;
+    width: 40px;
+    height: 50px;
+
+    .x-span {
+        background-color: white;
+        height: 1px;
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .x-span--able1, .x-span--able3, .x-span--disable1, .x-span--disable3 {
+        transition: transform 500ms ease;
+    }
+
+    .x-span--able1 {
+        transform: rotate(45deg) translate(6px,4px);
+    }
+    .x-span--able2 {
+        opacity: 0;
+    }
+    .x-span--able3 {
+        transform: rotate(-45deg) translate(11px,-9px);
+    }
+    .x-span--disable1 {
+        transform: rotate(0deg) translate(0px,0px);
+    }
+    .x-span--disable2 {
+        opacity: 1;
+        transition: opacity 500ms ease;
+    }
+    .x-span--disable3 {
+        transform: rotate(0deg) translate(0px,0px);
+    }
 }

@@ -17,38 +17,41 @@ export default function Navbar(props) {
 
     return (
         props.mobile ? (
-            showMobileMenu ? (
-                <nav className="header__navbar--mobile">
-                    <button 
-                        className="mobile__close-open" 
-                        onClick={toggleShowMobileMenu}
-                        >Ópen
-                    </button>
+            <>
+                <button 
+                    className="mobile__close-open" 
+                    onClick={toggleShowMobileMenu}>
+                        <span className={`${showMobileMenu ? "x-span--able1" : "x-span--disable1"} x-span`}></span>
+                        <span className={`${showMobileMenu ? "x-span--able2" : "x-span--disable2"} x-span`}></span>
+                        <span className={`${showMobileMenu ? "x-span--able3" : "x-span--disable3"} x-span`}></span>
+                </button>
+                <nav className={`header__navbar--mobile ${showMobileMenu ? "header__navbar--mobile--able" : "header__navbar--mobile--disable"}`}>
                     <MobileButton 
                         toggle={true}
                         english={props.english}
                         title="Like mode"
+                        toggleShowMobileMenu={toggleShowMobileMenu}
                     />
                     <MobileButton 
                         scrollTo={props.scrollTo}
                         english={props.english}
                         title="Projetos"
+                        toggleShowMobileMenu={toggleShowMobileMenu}
                     />
                     <MobileButton 
                         scrollTo={props.scrollTo}
                         english={props.english}
                         title="Contato"
+                        toggleShowMobileMenu={toggleShowMobileMenu}
                     />
                     <MobileButton 
                         toggle={true}
                         english={props.english}
                         title="English"
+                        toggleShowMobileMenu={toggleShowMobileMenu}
                     />
                 </nav>
-            )
-            : (
-                <none></none>
-            )
+            </>
         ) 
         : (
             <nav className="navbar">
