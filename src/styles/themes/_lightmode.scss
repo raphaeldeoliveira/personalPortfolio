@@ -50,6 +50,20 @@
         .toggleLanguage__dot {
             background-color: #333;
         }
+
+        .header__navbar--mobile {
+            background-color: darken(white, 18%);
+        }
+        .header__navbar--mobile > button {
+            background-color: darken(white, 18%);
+            color: black;
+        }
+        .x-span {
+            background-color: black;
+        }
+        .mobile__button--active {
+            color: palete.$quaternary-color !important;
+        }
     }
 
     .introductionSection {
