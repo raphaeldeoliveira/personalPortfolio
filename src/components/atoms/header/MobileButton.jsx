@@ -18,19 +18,17 @@ export default function MobileButton(props) {
             case "Light mode":
             case "Dark mode":
                 return <MdBrightnessMedium />;
-                break;
             case "Projects":
             case "Projetos":
                 return <FaFolder />;
-                break;
             case "Contact":
             case "Contato":
                 return <BsEnvelope />;
-                break;
             case "English":
             case "Portugues":
                 return <IoLanguage />;
-                break;
+            default:
+                return null;
         }
     }
 
