@@ -32,7 +32,8 @@
     background-color: lighten(black, 18%);
 
     & > button {
-        height: 25vh;
+        // height: 25vh;
+        height: 12vh;
         width: 100%;
         border: none;
         background-color: lighten(black, 18%);
@@ -53,6 +54,10 @@
 
         & > span {
             margin-left: 12px;
+        }
+
+        @media (max-width: 600px) {
+            height: 9vh;
         }
     }
 
