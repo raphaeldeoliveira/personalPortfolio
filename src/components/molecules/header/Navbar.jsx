@@ -5,7 +5,7 @@ import ButtonTheme from "../../atoms/header/ButtonTheme";
 import ToggleLanguage from "./ToggleLanguage";
 import MobileButton from "../../atoms/header/MobileButton";
 
-import '../../../styles/modules/header/_navbar.scss'
+import '../../../styles/modules/header/_navbar.scss';
 
 export default function Navbar(props) {
 
@@ -27,25 +27,25 @@ export default function Navbar(props) {
                 </button>
                 <nav className={`header__navbar--mobile ${showMobileMenu ? "header__navbar--mobile--able" : "header__navbar--mobile--disable"}`}>
                     <MobileButton 
-                        toggle={true}
+                        setLightTheme={props.setLightTheme}
                         english={props.english}
-                        title="Like mode"
+                        title="Light mode"
                         toggleShowMobileMenu={toggleShowMobileMenu}
                     />
                     <MobileButton 
                         scrollTo={props.scrollTo}
                         english={props.english}
-                        title="Projetos"
+                        title={props.english ? "Projects" : "Projetos"}
                         toggleShowMobileMenu={toggleShowMobileMenu}
                     />
                     <MobileButton 
                         scrollTo={props.scrollTo}
                         english={props.english}
-                        title="Contato"
+                        title={props.english ? "Contact" : "Contato"}
                         toggleShowMobileMenu={toggleShowMobileMenu}
                     />
                     <MobileButton 
-                        toggle={true}
+                        toggleLanguage={props.toggleLanguage}
                         english={props.english}
                         title="English"
                         toggleShowMobileMenu={toggleShowMobileMenu}

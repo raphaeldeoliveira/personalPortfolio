@@ -1,14 +1,66 @@
-import React from "react";
+import React, { useState } from "react";
+
+import { IoLanguage } from "react-icons/io5";
+import { BsEnvelope } from "react-icons/bs";
+import { FaFolder } from "react-icons/fa";
+import { MdBrightnessMedium } from "react-icons/md";
 
 export default function MobileButton(props) {
 
-    return <button
-        onClick={props.toggle ? props.toggleShowMobileMenu : 
-            () => props.scrollTo(
-                props.buttonTitle === "Projetos" ? "Projects" 
-                : props.buttonTitle === "Contato" ? "Contact" 
-                : props.buttonTitle)}
-    >{props.title}
+    const [activeButton, setActiveButton] = useState()
 
-    </button>
+    function toggleActiveButton() {
+        setActiveButton((prevState) => !prevState)
+    }
+
+    function renderIcons() {
+        switch (props.title) {
+            case "Light mode":
+            case "Dark mode":
+                return <MdBrightnessMedium />;
+                break;
+            case "Projects":
+            case "Projetos":
+                return <FaFolder />;
+                break;
+            case "Contact":
+            case "Contato":
+                return <BsEnvelope />;
+                break;
+            case "English":
+            case "Portugues":
+                return <IoLanguage />;
+                break;
+        }
+    }
+
+    return (
+        <button
+            onClick={() => {
+                props.toggleShowMobileMenu();
+                if (props.scrollTo) {
+                    setTimeout(() => {
+                        props.scrollTo(
+                            props.title === "Projetos"
+                            ? "Projects"
+                            : props.title === "Contato"
+                            ? "Contact"
+                            : props.title
+                        );
+                    }, 300)
+                } else {
+                    if (props.setLightTheme) {
+                        toggleActiveButton();
+                        props.setLightTheme((prevState) => !prevState)
+                        document.body.classList.toggle("lightmode");
+                    } else {
+                        toggleActiveButton();
+                        props.toggleLanguage()
+                    }
+                }
+            }}
+            className={activeButton ? "mobile__button--active" : ""}>
+                {renderIcons()} <span>{props.title}</span>
+        </button>
+    );
 }

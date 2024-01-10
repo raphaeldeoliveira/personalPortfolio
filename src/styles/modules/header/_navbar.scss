@@ -37,11 +37,29 @@
         border: none;
         background-color: lighten(black, 18%);
         color: white;
-        font-size: 3.2vw;
+        font-size: 4.6vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: none;
+
+        &:first-of-type {
+            margin-top: 70px;
+        }
 
         &:hover, &:active {
             color: lighten(black, 50%);
         }
+
+        & > span {
+            margin-left: 12px;
+        }
+    }
+
+    .mobile__button--active {
+        color: green;
+        text-decoration: underline;
+        transition: none;
     }
 }
 
@@ -76,7 +94,7 @@
     }
 
     .x-span--able1, .x-span--able3, .x-span--disable1, .x-span--disable3 {
-        transition: transform 500ms ease;
+        transition: transform 400ms ease;
     }
 
     .x-span--able1 {
