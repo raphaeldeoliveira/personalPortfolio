@@ -20,6 +20,13 @@
     height: 400px;
     position: relative;
     margin: auto;
+
+    @media (max-width: 780px) {
+        width: 100vw;
+        height: 85vw;
+        position: relative;
+        margin: auto;
+    }
 }
 
 .photo-section__flip {
@@ -37,6 +44,10 @@
         border-radius: 50%;
         position: absolute;
         backface-visibility: hidden;
+
+        @media (max-width: 780px) {
+            width: 70%;
+        }
     }
 }
 
