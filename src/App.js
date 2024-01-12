@@ -84,6 +84,7 @@ function App() {
       />
       <ProjectsSection 
         english={english}
+        lightTheme={lightTheme}
         mobile={mobile}
         scrollY={scrollY}
         setScrollY={setScrollY}

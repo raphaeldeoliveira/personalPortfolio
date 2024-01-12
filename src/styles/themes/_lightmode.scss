@@ -249,6 +249,11 @@
         .panel__paragraph {
             line-height: 1;
         }
+        .carrousel__layout {
+            @media (max-width: 780px) {
+                height: 193vw;
+            }
+        }
     }
 
     .footer {

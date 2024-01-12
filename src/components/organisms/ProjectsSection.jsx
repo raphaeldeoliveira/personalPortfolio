@@ -7,11 +7,14 @@ import '../../styles/layout/_projectsSection.scss';
 
 export default function ProjectsSection(props) {
 
+    let position1 = props.lightTheme ? -193 : -194.5
+    let position2 = props.lightTheme ? -386 : -389
+
     function scrollPanels(type) {
         props.setScrollY((prevState) => {
             return (type === "up" 
-                ? (prevState === 0 ? (props.mobile ? -389 : -76.54) : (prevState === -194.5 || prevState === -38.27) ? 0 : (props.mobile ? -194.5 : -38.27)) 
-                : (prevState === 0 ? (props.mobile ? -194.5 : -38.27) : (prevState === -194.5 || prevState === -38.27) ? (props.mobile ? -389 : -76.54) : 0)
+                ? (prevState === 0 ? (props.mobile ? position2 : -76.54) : (prevState === position1 || prevState === -38.27) ? 0 : (props.mobile ? position1 : -38.27)) 
+                : (prevState === 0 ? (props.mobile ? position1 : -38.27) : (prevState === position1 || prevState === -38.27) ? (props.mobile ? position2 : -76.54) : 0)
             )
         })
     }
