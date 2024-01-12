@@ -35,7 +35,7 @@ export default function Card(props) {
             <button 
                 className={props.lightMode ? "card-section__card--2" : "card-section__card--1"}
             >
-                <div onClick={() => props.lightMode ? window.open("https://leetcode.com/raphaeloc/", '_blank') : scrollToProject()} className="card__text-section">
+                <div onClick={() => props.lightMode ? window.open("https://leetcode.com/raphaeloc/", '_blank') : scrollToProject(props.currentId)} className="card__text-section">
                     <h4>{props.title}</h4>
                     <p>{props.description}</p>
                 </div>
@@ -51,7 +51,7 @@ export default function Card(props) {
                 <CarrouselImages
                     images={props.images}
                 />
-                <div onClick={() => props.scrollTo(props.currentId)} className="text-section">
+                <div onClick={() => props.lightMode ? window.open("https://leetcode.com/raphaeloc/", '_blank') : scrollToProject(props.currentId)} className="text-section">
                     <h4 className="text-section__title">{props.title}</h4>
                     <p>{props.description}</p>
                 </div>

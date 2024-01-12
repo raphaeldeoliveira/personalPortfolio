@@ -10,8 +10,8 @@ export default function ProjectsSection(props) {
     function scrollPanels(type) {
         props.setScrollY((prevState) => {
             return (type === "up" 
-                ? (prevState === 0 ? (props.mobile ? -377 : -76.54) : (prevState === -188.5 || prevState === -38.27) ? 0 : (props.mobile ? -188.5 : -38.27)) 
-                : (prevState === 0 ? (props.mobile ? -188.5 : -38.27) : (prevState === -188.5 || prevState === -38.27) ? (props.mobile ? -377 : -76.54) : 0)
+                ? (prevState === 0 ? (props.mobile ? -389 : -76.54) : (prevState === -194.5 || prevState === -38.27) ? 0 : (props.mobile ? -194.5 : -38.27)) 
+                : (prevState === 0 ? (props.mobile ? -194.5 : -38.27) : (prevState === -194.5 || prevState === -38.27) ? (props.mobile ? -389 : -76.54) : 0)
             )
         })
     }

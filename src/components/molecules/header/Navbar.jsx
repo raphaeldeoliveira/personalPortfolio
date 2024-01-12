@@ -10,7 +10,7 @@ import '../../../styles/modules/header/_navbar.scss';
 export default function Navbar(props) {
 
     const [showMobileMenu, setShowMobileMenu] = useState(false)
-
+    
     function toggleShowMobileMenu() {
         setShowMobileMenu((prevState) => !prevState)
     }
